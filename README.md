@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tu Farmacia - Coquimbo
+
+A minimalistic pharmacy website demo built with Next.js, Tailwind CSS, and Supabase.
+
+## Features
+
+- 🏥 Pharmacy information and services
+- 💊 Service highlights (medications, blood pressure monitoring, delivery)
+- 📍 Contact information for Coquimbo location
+- 📱 Responsive design
+- 🌐 Ready for Vercel deployment
+- 🗄️ Supabase integration ready
+
+## Tech Stack
+
+- **Framework**: Next.js 15 with TypeScript
+- **Styling**: Tailwind CSS
+- **Database**: Supabase (configured)
+- **Deployment**: Vercel
 
 ## Getting Started
 
-First, run the development server:
+1. **Clone and install dependencies:**
+   ```bash
+   npm install
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+2. **Set up environment variables:**
+   ```bash
+   cp .env.local.example .env.local
+   ```
+   Then edit `.env.local` with your Supabase credentials.
+
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open** [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Deployment
+
+### Vercel Deployment
+
+1. Push your code to a Git repository (GitHub, GitLab, or Bitbucket)
+2. Import your project in [Vercel](https://vercel.com)
+3. Add your environment variables in Vercel dashboard
+4. Deploy!
+
+### Supabase Setup
+
+1. Create a new project at [Supabase](https://supabase.com)
+2. Copy your project URL and anon key
+3. Add them to your environment variables
+4. Create any necessary tables in your Supabase dashboard
+
+## Environment Variables
+
+Create a `.env.local` file with the following variables:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+tu-farmacia/
+├── src/
+│   └── app/
+│       ├── page.tsx          # Main pharmacy homepage
+│       ├── layout.tsx        # Root layout
+│       └── globals.css       # Global styles
+├── lib/
+│   └── supabase.ts          # Supabase client configuration
+├── public/                  # Static assets
+├── .env.local.example      # Environment variables template
+├── vercel.json            # Vercel deployment configuration
+└── README.md
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Customization
 
-## Learn More
+- Edit `src/app/page.tsx` to modify the main page content
+- Update contact information and location details
+- Add more pages by creating new files in `src/app/`
+- Customize styling in Tailwind classes
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This is a demo project for educational purposes.
